@@ -12,22 +12,53 @@ We will be performing the following steps for this Challenge:
 
 - Interact with Your Deployed Smart Contract
 
-
 ## Technologies
 
 This example uses the following technologies:
 
-- **Remix**
-- **Solidity**
-- **Ethereum**
+- **Ethereum** - Ethereum is a decentralized, open-source blockchain with smart contract functionality.
+- **Solidity** - Solidity is a statically-typed curly-braces programming language designed for developing smart contracts that run on Ethereum.
+- **Remix IDE** - Remix IDE is an open-source, browser based tool that allows developers to create and test smart contracts using Solidity.
 
-## Installation
+## Screenshots
 
-TO DO
+### 1. The `setAccounts` function.
 
-## Usage
+In this section, we use the `setAccounts` function to define the authorized Ethereum address that will be able to withdraw funds from your contract. The two addresses that we use are:
 
-TO DO
+```
+Dummy account1 address: 0x0c0669Cd5e60a6F4b8ce437E4a4A007093D368Cb
+Dummy account2 address: 0x7A1f3dFAa0a4a19844B606CD6e91d693083B12c0
+```
+
+![setAccount](/Execution_Results/setAccounts.jpg)
+
+### 2. The `deposit` function.
+
+In this section, we test the `deposit` functionality of the smart contract by sending the 1, 10 and 5 ether to the contract. After each transaction, use the contractBalance function to verify that the funds were added to the contract:
+
+Transaction 1: Send 1 ether as wei.
+
+![Send 1 ether as wei](/Execution_Results/deposit_1_ether.jpg)
+
+Transaction 2: Send 10 ether as wei.
+
+![Send 10 ether as wei](/Execution_Results/deposit_10_ether.jpg)
+
+Transaction 3: Send 5 ether.
+
+![Send 5 ether as wei](/Execution_Results/deposit_5_ether.jpg)
+
+### 3. The `withdraw` function.
+
+In this section, we test the contract’s `withdraw` functionality by withdrawing 5 ether into accountOne and 10 ether into accountTwo. After each transaction, use the `contractBalance` function to verify that the funds were withdrawn from your contract. Also, use the `lastToWithdraw` and `lastWithdrawAmount` functions to verify that the address and amount were correct.
+
+Transaction 1: Withdraw 5 ether
+
+![Withdraw 5 ether](/Execution_Results/withdraw_5_ether.jpg)
+
+Transaction 2: Withdraw 10 ether
+![Withdraw 10 ether](/Execution_Results/withdraw_10_ether.jpg)
 
 ## Contributors
 
